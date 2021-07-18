@@ -11,7 +11,7 @@ function App() {
           <div className="weatherapp">
             <Head />
             <hr />
-            <p>coded by Helen Nonhoff</p>
+            <p id="coded-by" >coded by Helen Nonhoff</p>
           </div>
         </div>
       </h1>

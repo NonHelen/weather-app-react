@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Details from "./Details";
 import Today from "./Today";
 
 export default function Search() {
@@ -8,7 +7,6 @@ export default function Search() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        setAlert(<Details city={city} />);
         setAlert(<Today city={city} />);
     }
 
@@ -19,7 +17,7 @@ export default function Search() {
     return (
         <div className="head">
             <form id="search-form" onSubmit={handleSubmit}>
-                <input type="search" placeholder="Type in city" onChange={updateCity} />
+                <input type="search" placeholder="Type in city" onChange={updateCity} id="search-input" />
                 <input type="submit" value="🔎" id="search-button"/>
                 <button id="current-button">🚩</button>
             </form>
