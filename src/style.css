@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+.weatherapp {
+  background-image: linear-gradient(to top, #b67162 0%, #9c3d54 50%);
+  box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+  border-radius: 10px;
+  width: 75%;
+  padding: 30px;
+  margin: 30px auto;
+  opacity: 0.9;
+  color: #e4d3cf;
+}
+.card {
+  border: none;
+}
+.background {
+  color: aliceblue;
+}
+#search-form {
+  font-size: 20px;
+  position: relative;
+  left: 50px;
+  top: 20px;
+}
+#search-input {
+  padding: 2.5px;
+  border: 2.5px solid #d99cbf;
+  border-radius: 20px;
+}
+#search-button {
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: rgb(216, 191, 216);
+  padding: 5px;
+  border: 2.5px solid #d99cbf;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+#search-button:hover {
+  cursor: pointer;
+  background-color: #e8e5e2;
+}
+#current-button {
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: rgb(216, 191, 216);
+  padding: 5px;
+  border: 2.5px solid #d99cbf;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+  color: #4f3b57;
+}
+#current-button:hover {
+  cursor: pointer;
+  background-color: #e8e5e2;
+}
+
+.current-weather {
+  background-color: transparent;
+  border: black;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  width: 500px;
+}
+#degree {
+  font-size: 55px;
+}
+
+.unit {
+  background: transparent;
+  border: transparent;
+  display: inline;
+  padding: 0px 1.5px;
+  margin: 0 0.5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #6b213c;
+  transition: all 200ms ease-in-out;
+}
+.unit:hover {
+  cursor: pointer;
+  color: #e8e5e2;
+}
+
+#temperature-unit {
+  font-size: 20px;
+  color: #6b213c;
+}
+#date {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.today {
+  position: relative;
+  top: 30px;
+}
+.sun-gif {
+  size: 100px;
+}
+h1 {
+  display: inline;
+  font-family: "Montserrat", sans-serif;
+}
+ul {
+  list-style: none;
+}
+#humidity {
+  display: inline;
+  margin: 0 auto;
+}
+.col-5 .current-weather {
+  width: 120px;
+  background-color: transparent;
+}
+.details {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+}
+
+.coded-by {
+  padding: 25px 0;
+  position: relative;
+  top: 50px;
+  font-family: monospace;
+  font-size: 12.5px;
+}
