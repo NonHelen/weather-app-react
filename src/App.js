@@ -1,8 +1,7 @@
 import './App.css';
 import "./style.css";
 import Head from "./Head";
-import Today from "./Today";
-import Details from "./Details";
+
 
 function App() {
   return (
@@ -11,8 +10,6 @@ function App() {
         <div className="container">
           <div className="weatherapp">
             <Head />
-            <Today />
-            <Details />
             <hr />
             <p>coded by Helen Nonhoff</p>
           </div>

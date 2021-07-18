@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from 'axios';
 
-export default function Today() {
-    return (
+export default function Weather(props) {
+    let [temperature, setTemperature] = useState(null);
+    let [icon, setIcon] = useState(null);
+
+    function handleResponse(response) {
+        setTemperature(response.data.main.temp);
+        setIcon(
+            `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+        );
+
+    }
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=metric&appid=e622d848ff198076554702327a2f95f9`;
+    axios.get(url).then(handleResponse);
+
+return(
         <div className="today">
             <div className="row">
                 <div className="col-7 heading">
-                    <img
-                        src="https://media2.giphy.com/media/fwR54Wq7dYu9VXKiAF/giphy.gif"
-                        alt="SUN GIF"
-                        width="100"
-                    />
-                    <h1 id="city">Tübingen</h1>
+                <img src={icon} alt="icon"></img>
+                    <h1 id="city">{props.city}</h1>
                     <br />
                     <p id="date">13/06/2021</p>
                 </div>
@@ -18,9 +28,8 @@ export default function Today() {
                     <div className="card current-weather">
                         <div className="card-body">
                             <span className="card-title" id="degree">
-                                18
+                                {Math.round(temperature)} °C
                             </span>
-                            <p>18°C</p> |<p>68°F</p>
                         </div>
                     </div>
                 </div>
