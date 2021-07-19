@@ -7,7 +7,7 @@ export default function Search() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        setAlert(<Today city={city} />);
+        setAlert(<Today defaultCity="Aguascalientes" city={city} />);
     }
 
     function updateCity(event) {
