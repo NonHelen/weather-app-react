@@ -15,11 +15,12 @@
 #background {
   color: aliceblue;
 }
+
+#head {
+  text-align: right;
+}
 #search-form {
   font-size: 20px;
-  position: relative;
-  left: 50px;
-  top: 20px;
 }
 #search-input {
   padding: 2.5px;

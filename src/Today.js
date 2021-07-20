@@ -43,7 +43,7 @@ export default function Weather(props) {
                 </Row>
             </Container>
             <div id="date">
-                <p>Updated on <Date date={props.data.date}/></p>
+                <p><Date /></p>
             </div>
             <div id="details">
                 <ul>

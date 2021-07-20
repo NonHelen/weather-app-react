@@ -1,7 +1,6 @@
 import './App.css';
 import "./style.css";
-import Today from "./Today";
-
+import Head from "./Head";
 
 function App() {
   return (
@@ -9,7 +8,7 @@ function App() {
       <h1>
         <div id="container">
           <div id="weatherapp">
-            <Today defaultCity="Aguascalientes"/>
+            <Head />
             <hr />
             <p id="coded-by" >coded by Helen Nonhoff</p>
           </div>

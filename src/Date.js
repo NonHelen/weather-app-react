@@ -1,52 +1,24 @@
-import React from "react";
+import  React, { useState , useEffect } from 'react'
 
+export const DateTime = () => {
 
-export default function Today(props) {
-    let days = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-    ];
+    var [date,setDate] = useState(new Date());
+    
+    useEffect(() => {
+        var timer = setInterval(()=>setDate(new Date()), 1000 )
+        return function cleanup() {
+            clearInterval(timer)
+        }
+    
+    });
 
-    let months = [
-        "January",
-        "Febuary",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-    ];
+    return(
+        <div>
+            <p>{date.toLocaleDateString()} | {date.toLocaleTimeString()}</p>
+            
 
-    let day = days[props.date.getDay()];
-    let dayNumber = props.date.getDate();
-    let month = months[props.date.getMonth()];
-    let hours = props.date.getHours();
-    if (hours < 10) {
-        hours = `0${hours}`;
-    }
-    let minutes = props.date.getMinutes();
-    if (minutes < 10) {
-        minutes = `0${minutes}`;
-    }
-
-    return (
-        <div className="Today">
-            <div className="Date">
-                {day} {dayNumber} {month}
-            </div>
-            <div className="Time">
-                {hours}:{minutes}
-            </div>
         </div>
-    );
+    )
 }
+
+export default DateTime

@@ -15,7 +15,7 @@ export default function Search() {
     }
 
     return (
-        <div className="head">
+        <div id="head">
             <form id="search-form" onSubmit={handleSubmit}>
                 <input type="search" placeholder="Type in city" onChange={updateCity} id="search-input" />
                 <input type="submit" value="🔎" id="search-button"/>
