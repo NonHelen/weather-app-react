@@ -11,7 +11,9 @@ function App() {
           <div id="weatherapp">
             <Today defaultCity= "Aguascalientes"/>
             <hr />
+            <p>
             <a href="https://github.com/NonHelen/weather-app-react" id="coded-by" target="_blank" >coded by Helen Nonhoff</a>
+            </p>
           </div>
         </div>
       </h1>
