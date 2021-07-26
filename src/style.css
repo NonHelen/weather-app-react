@@ -19,6 +19,8 @@
 #head {
   text-align: right;
 }
+
+
 #search-form {
   font-size: 20px;
 }
@@ -73,6 +75,7 @@ h1 {
   font-size: 20px;
     font-family: "Roboto Condensed", sans-serif;
     text-align: left;
+    padding: 10px;
 }
 
 
