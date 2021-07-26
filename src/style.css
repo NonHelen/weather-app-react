@@ -28,7 +28,9 @@
   padding: 2.5px;
   border: 2.5px solid #d99cbf;
   border-radius: 20px;
+  font-size: 15px;
 }
+
 #search-button {
   font-size: 15px;
   font-weight: bolder;
