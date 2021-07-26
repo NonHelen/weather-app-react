@@ -1,6 +1,7 @@
 import React from "react";
 import Date from "./Date";
 
+
 export default function Weatherinfo (props) {
      return (
         <div>
