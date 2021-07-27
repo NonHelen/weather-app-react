@@ -1,6 +1,6 @@
 import React from "react";
-
-import WeatherUnit from "./WeatherUnit"
+import Date from "./Date";
+import WeatherUnit from "./WeatherUnit";
 
 
 export default function Weatherinfo (props) {
@@ -21,7 +21,10 @@ export default function Weatherinfo (props) {
                     </div>
                 </div>
             </div>
-            
+            <div id="date">
+                <p><Date /></p>
+            </div>
+
             <div id="details">
                 <ul>
                     <li style={{ textTransform: 'capitalize'}}>{props.data.description}</li>
