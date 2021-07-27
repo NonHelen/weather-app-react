@@ -1,5 +1,6 @@
 import React from "react";
 import Date from "./Date";
+import WeatherUnit from "./WeatherUnit"
 
 
 export default function Weatherinfo (props) {
@@ -15,9 +16,7 @@ export default function Weatherinfo (props) {
                             </div>
                         </div>
                         <div className="col-3 pt-2 city-name">
-                            <div className="text-start" id="current-weather">
-                                {Math.round(props.data.temperature)} °C
-                            </div>
+                            < WeatherUnit celsius= {props.data.temperature} />                           
                         </div>
                     </div>
                 </div>
