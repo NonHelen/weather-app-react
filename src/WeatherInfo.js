@@ -22,7 +22,7 @@ export default function Weatherinfo (props) {
                 </div>
             </div>
             <div id="date">
-                <p><Date /></p>
+                <Date />
             </div>
 
             <div id="details">
