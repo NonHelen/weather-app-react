@@ -1,5 +1,5 @@
+
 import './App.css';
-import "./style.css";
 import Today from "./Today";
 
 
@@ -9,8 +9,7 @@ function App() {
       <h1>
         <div id="container">
           <div id="weatherapp">
-            <Today defaultCity= "Aguascalientes"/>
-            <hr />
+            <Today defaultCity= "Aguascalientes"/>            
             <p id="coded-by"> coded by             
             <a href="https://github.com/NonHelen/weather-app-react"   > Helen Nonhoff</a>
             </p>

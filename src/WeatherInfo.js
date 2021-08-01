@@ -1,12 +1,13 @@
 import React from "react";
 import Date from "./Date";
 import WeatherUnit from "./WeatherUnit";
+import './WeatherInfo.css';
 
 
 export default function Weatherinfo (props) {
      return (
         <div>
-            <img src={props.data.icon} alt="icon" id="icon"></img>
+            <img src={props.data.icon} alt="icon" id="todayIcon"></img>
             <div className="container">
                 <div className="weather-app" id="today">
                     <div className="row">

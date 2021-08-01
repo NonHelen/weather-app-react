@@ -1,0 +1,17 @@
+#unit {
+  font-size: 15px;
+  position: relative;
+  top: -16px;
+}
+
+#fahrenheit {
+  text-decoration: none;
+}
+
+#current-weather {
+  background-color: transparent;
+  border: black;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  width: 500px;
+}
