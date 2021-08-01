@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import './WeatherForecast.css'
+import ForecastDay from "./ForecastDay";
+import './WeatherForecast.css';
 
 export default function Weatherforecast (props){
     const [forecast, setForecast] = useState({ready:false});
@@ -9,10 +10,7 @@ export default function Weatherforecast (props){
     function handleResponse (response){
         setForecast ({
         ready: true,
-        forecasttempmax: response.data.daily[0].temp.max,
-        forecasttempmin: response.data.daily[0].temp.min,
-        forecastday: response.data.daily[0].dt,
-        forecasticon: `http://openweathermap.org/img/wn/${response.data.daily[0].weather[0].icon}@2x.png` 
+        forecast: response.data.daily,
     })}
 
     let apiURL= `https://api.openweathermap.org/data/2.5/onecall?lat=${props.data.lat}&lon=${props.data.lon}&exclude={part}&appid=e622d848ff198076554702327a2f95f9&units=metric`
@@ -22,16 +20,17 @@ export default function Weatherforecast (props){
         return (
         <div id="weatherForecast">
             <div className="row">
-                <div className="col">
-                <div className="weatherForecast-day" >
-                    {forecast.forecastday}
-                </div>
-                <img src={forecast.forecasticon} alt="icon" className="weatherForecast-icon"></img>
-                <div className="weatherForecast-temperature">
-                    <span className="weatherForecast-temperature-max" > {Math.round(forecast.forecasttempmax)}° </span>
-                    <span className="weatherForecast-temperature-min"> {Math.round(forecast.forecasttempmin)}° </span>
-                </div>
-                </div>
+                {forecast.map(function (dailyForecast, index){
+                    if (index < 5){
+                        return (
+                        <div className="col" key={index}>
+                                <ForecastDay data={dailyForecast} />
+                            </div> 
+                        );
+                    } else {
+                        return null
+                    }
+                })}
             </div>
         </div>
     )

@@ -8,12 +8,8 @@ h1 {
   display: inline;
 }
 
-ul {
+#details ul {
   list-style: none;
-}
-#humidity {
-  display: inline;
-  margin: 0 auto;
 }
 
 #details {
@@ -24,7 +20,10 @@ ul {
   text-align: left;
 }
 
-
+#humidity {
+  display: inline;
+  margin: 0 auto;
+}
 
 
 
