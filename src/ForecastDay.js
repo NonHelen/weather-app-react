@@ -1,41 +1,42 @@
 import React from 'react';
 
 
-export default function Forecastday (props) {
+export default function WeatherForecastDay(props) {
+  function maxTemperature() {
+    let temperature = Math.round(props.data.temp.max);
+    return `${temperature}°`;
+  }
 
-    function minTemp (){
-        let temperature = Math.round(props.data.temp.min);
-        return `${temperature}°`;
-    }
+  function minTemperature() {
+    let temperature = Math.round(props.data.temp.min);
+    return `${temperature}°`;
+  }
 
-    function maxTemp (){
-        let temperature = Math.round(props.data.temp.max);
-        return `${temperature}°`;
-    }
+  function day() {
+    let date = new Date(props.data.dt * 1000);
+    let day = date.getDay();
+
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+    return days[day];
+  }
 
     function icon (){
-        let forecasticon = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
+        let forecasticon = `http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
         return forecasticon
     }
 
-    function day (){
-        let date = new Date (props.data.forecastday * 1000);
-        let day = date.getDate();
 
-        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ]
-
-        return days [day];
-    }
 
     return (
         <div>
             <div className="weatherForecast-day" >
-                        {day()}
+                    {day()}
                     </div>
-                    <img src={icon} alt="icon" className="weatherForecast-icon"></img>
+                    <img src={icon()} alt="icon" className="weatherForecast-icon center"></img>
                     <div className="weatherForecast-temperature">
-                        <span className="weatherForecast-temperature-max" > {maxTemp} </span>
-                        <span className="weatherForecast-temperature-min"> {minTemp} </span>
+                        <span className="weatherForecast-temperature-max" > {maxTemperature()} </span>
+                        <span className="weatherForecast-temperature-min"> {minTemperature()} </span>
             </div>
         </div>
     )
