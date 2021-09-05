@@ -44,7 +44,6 @@ export default function Weather(props) {
                 <form id="search-form" onSubmit={handleSubmit}>
                     <input type="search" placeholder="Type in city" autoComplete="off" autoFocus="on" onChange={updateCity} id="search-input" />
                     <input type="submit" value="🔎" id="search-button"/>
-                    <button id="current-button">🚩</button>
                 </form>
             </div>
             <WeatherInfo data={weatherData} />
